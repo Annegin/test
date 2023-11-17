@@ -578,7 +578,7 @@
 
         var messageWithUserEmailAndTariff = "Пользователь оставил почту: " + userEmail +
             "\nТариф: " + getTariffText(selectedTariff) +
-            "\n" + document.getElementById("volunteer-message").value;
+            "\nСообщение:" + document.getElementById("volunteer-message").value;
 
         emailjs.send("service_b89dzxc", "template_fho83wd", {
             "from_name": document.getElementById("volunteer-name").value,
