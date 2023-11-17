@@ -569,35 +569,36 @@
 
         <!-- JAVASCRIPT FILES -->
        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script>
-            emailjs.init("c4WedNTfOR4VNhAL-");
+<script>
+    emailjs.init("c4WedNTfOR4VNhAL-");
 
-            function sendEmail() {
-                var toEmail = document.getElementById("volunteer-email").value;
+    function sendEmail() {
+        var toEmail = document.getElementById("volunteer-email").value;
 
-                emailjs.send("service_b89dzxc", "template_fho83wd", {
-                    "to_email": toEmail,
-                    "from_name": document.getElementById("volunteer-name").value,
-                    "job_salary": document.getElementById("job-salary").value,
-                    "message": document.getElementById("volunteer-message").value
-                }).then(
-                    function (response) {
-                        console.log("Успешно отправлено", response);
-                        clearForm();
-                    },
-                    function (error) {
-                        console.log("Ошибка отправки", error);
-                    }
-                );
+        emailjs.send("service_b89dzxc", "template_fho83wd", {
+            "to_email": toEmail,
+            "from_name": document.getElementById("volunteer-name").value,
+            "job_salary": document.getElementById("job-salary").value,
+            "message": document.getElementById("volunteer-message").value
+        }).then(
+            function (response) {
+                console.log("Успешно отправлено", response);
+                clearForm();
+            },
+            function (error) {
+                console.log("Ошибка отправки", error);
             }
+        );
+    }
 
-            function clearForm() {
-                document.getElementById("volunteer-name").value = "";
-                document.getElementById("volunteer-email").value = "";
-                document.getElementById("job-salary").selectedIndex = 0;
-                document.getElementById("volunteer-message").value = "";
-            }
-        </script>
+    function clearForm() {
+        document.getElementById("volunteer-name").value = "";
+        document.getElementById("volunteer-email").value = "";
+        document.getElementById("job-salary").selectedIndex = 0;
+        document.getElementById("volunteer-message").value = "";
+    }
+</script>
+
 
 
         <script src="js/jquery.min.js"></script>
