@@ -568,13 +568,15 @@
         </footer>
 
         <!-- JAVASCRIPT FILES -->
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+       <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script>
-            emailjs.init("c4WedNTfOR4VNhAL-"); // Замените "user_c4WedNTfOR4VNhAL-" на ваш реальный public key из Email.js
+            emailjs.init("c4WedNTfOR4VNhAL-");
 
             function sendEmail() {
+                var toEmail = document.getElementById("volunteer-email").value;
+
                 emailjs.send("service_b89dzxc", "template_fho83wd", {
-                    "to_email": "smartbog@mail.ru", // Замените на ваш желаемый адрес электронной почты
+                    "to_email": toEmail,
                     "from_name": document.getElementById("volunteer-name").value,
                     "job_salary": document.getElementById("job-salary").value,
                     "message": document.getElementById("volunteer-message").value
