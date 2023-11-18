@@ -570,7 +570,7 @@
         <!-- JAVASCRIPT FILES -->
         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-    emailjs.init("c4WedNTfOR4VNhAL-");
+    emailjs.init("0TX8Gsb6l2KgkW8LG-");
 
     function sendEmail() {
         var userEmail = document.getElementById("volunteer-email").value;
@@ -580,7 +580,7 @@
             "\nТариф: " + getTariffText(selectedTariff) +
             "\nСообщение:" + document.getElementById("volunteer-message").value;
 
-        emailjs.send("service_b89dzxc", "template_fho83wd", {
+        emailjs.send("service_nke8s5j", "template_6h096ny", {
             "from_name": document.getElementById("volunteer-name").value,
             "job_salary": selectedTariff,
             "message": messageWithUserEmailAndTariff
