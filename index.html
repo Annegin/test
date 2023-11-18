@@ -569,31 +569,31 @@
 
         <!-- JAVASCRIPT FILES -->
         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-    emailjs.init("0TX8Gsb6l2KgkW8LG-");
-
-    function sendEmail() {
-        var userEmail = document.getElementById("volunteer-email").value;
-        var selectedTariff = document.getElementById("job-salary").value;
-
-        var messageWithUserEmailAndTariff = "Пользователь оставил почту: " + userEmail +
-            "\nТариф: " + getTariffText(selectedTariff) +
-            "\nСообщение:" + document.getElementById("volunteer-message").value;
-
-        emailjs.send("service_nke8s5j", "template_6h096ny", {
-            "from_name": document.getElementById("volunteer-name").value,
-            "job_salary": selectedTariff,
-            "message": messageWithUserEmailAndTariff
-        }).then(
-            function (response) {
-                console.log("Успешно отправлено", response);
-                clearForm();
-            },
-            function (error) {
-                console.log("Ошибка отправки", error);
-            }
-        );
-    }
+        <script>
+            emailjs.init("0TX8Gsb6l2KgkW8LG");
+        
+            function sendEmail() {
+                var userEmail = document.getElementById("volunteer-email").value;
+                var selectedTariff = document.getElementById("job-salary").value;
+        
+                var messageWithUserEmailAndTariff = "Пользователь оставил почту: " + userEmail +
+                    "\nТариф: " + getTariffText(selectedTariff) +
+                    "\nСообщение:" + document.getElementById("volunteer-message").value;
+        
+                emailjs.send("service_nke8s5j", "template_6h096ny", {
+                    "from_name": document.getElementById("volunteer-name").value,
+                    "job_salary": selectedTariff,
+                    "message": messageWithUserEmailAndTariff
+                }).then(
+                    function (response) {
+                        console.log("Успешно отправлено", response);
+                        clearForm();
+                    },
+                    function (error) {
+                        console.log("Ошибка отправки", error);
+                    }
+                );
+        }
 
     function clearForm() {
         document.getElementById("volunteer-name").value = "";
@@ -617,10 +617,6 @@
         }
     }
 </script>
-
-
-
-
 
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
